@@ -22,6 +22,15 @@ public class SonConversation implements Serializable {
 	public static final String LIST = "/listFathers.xhtml";
 	private static final String MOD = "/addModSon.xhtml";
 
+	private Long idModify;
+	
+	public Long getIdModify() {
+		return idModify;
+	}
+	public void setIdModify(Long idModify) {
+		this.idModify = idModify;
+	}
+	
 	@Inject
 	SonRepository sonRepository;
 
@@ -55,6 +64,14 @@ public class SonConversation implements Serializable {
 		this.model = model;
 	}
 
+	public String modifyById() {
+		System.out.println("ID SON: " + getIdModify());
+		this.son = sonRepository.find(getIdModify());
+		if (this.son == null)
+			System.out.println("son not found");
+		return MOD;
+	}
+	
 	public String modify(Long id) {
 		System.out.println("ID SON: " + id);
 		this.son = sonRepository.find(id);
