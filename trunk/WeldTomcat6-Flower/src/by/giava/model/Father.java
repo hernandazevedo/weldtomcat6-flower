@@ -2,6 +2,7 @@ package by.giava.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -20,6 +21,7 @@ public class Father implements Serializable {
 	private Long id;
 	private String name;
 	private String surname;
+	private Date date;
 	private List<Son> sons;
 
 	@Id
@@ -32,6 +34,13 @@ public class Father implements Serializable {
 		this.id = id;
 	}
 
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	
 	public String getName() {
 		return name;
 	}
