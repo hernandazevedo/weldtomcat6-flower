@@ -2,7 +2,9 @@ package by.giava.model;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -44,7 +46,7 @@ public class Son implements Serializable {
 		this.surname = surname;
 	}
 
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY, cascade = CascadeType.ALL)
 	public Father getFather() {
 		return father;
 	}
@@ -52,4 +54,7 @@ public class Son implements Serializable {
 	public void setFather(Father father) {
 		this.father = father;
 	}
+
+	
+	
 }

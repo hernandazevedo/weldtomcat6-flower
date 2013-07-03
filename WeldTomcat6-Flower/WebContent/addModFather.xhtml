@@ -3,7 +3,10 @@
 	xmlns:c="http://java.sun.com/jstl/core"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:ui="http://java.sun.com/jsf/facelets" template="template.xhtml">
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+    xmlns:rich="http://richfaces.org/rich"
+	template="template.xhtml">
 
 	<ui:define name="title">Father add Mod</ui:define>
 	<ui:define name="head">Father add Mod</ui:define>
@@ -14,6 +17,18 @@
 				<h:outputLabel for="name" value="name" />
 				<h:inputText id="name" value="#{fatherConversation.father.name}" />
 				<br />
+				<p>Data</p>
+
+	                <rich:calendar id="cal" value="#{fatherConversation.father.date}"
+						 popup="true"
+						 showApplyButton="false"
+						 style="width:200px"
+						 >
+						 
+					 </rich:calendar>
+
+	            <br/>
+				
 				<h:outputLabel for="surname" value="surname:" />
 				<h:inputText id="surname"
 					value="#{fatherConversation.father.surname}" />

@@ -65,11 +65,8 @@ public class SonConversation implements Serializable {
 	}
 
 	public String modifyById() {
-		System.out.println("ID SON: " + getIdModify());
-		this.son = sonRepository.find(getIdModify());
-		if (this.son == null)
-			System.out.println("son not found");
-		return MOD;
+		
+		return modify(getIdModify());
 	}
 	
 	public String modify(Long id) {
