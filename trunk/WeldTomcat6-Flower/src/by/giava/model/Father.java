@@ -13,6 +13,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Table(name = "Father")
@@ -40,8 +44,10 @@ public class Father implements Serializable {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	
-	public String getName() {
+	@NotNull
+    @NotEmpty
+    @Pattern(regexp = "[A-Za-z]*")
+    public String getName() {
 		return name;
 	}
 
