@@ -3,6 +3,8 @@ package com.wizard.controller;
 import java.util.List;
 
 import javax.enterprise.context.Conversation;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 
 import com.wizard.viewmanager.View;
@@ -100,4 +102,6 @@ public abstract class AbstractWizard
 			
 		throw new IllegalStateException();
 	}
+	
+	
 }
