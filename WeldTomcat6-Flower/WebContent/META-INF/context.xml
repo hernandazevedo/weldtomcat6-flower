@@ -14,19 +14,8 @@
 		  maxWait="5000" removeAbandoned="true" 
 		  removeAbandonedTimeout="300" logAbandoned="true"
 		  username="root" password="root" driverClassName="com.mysql.jdbc.Driver" 
-		  url="jdbc:mysql://localhost:3306/boadica" description="Base de dados"
+		  url="jdbc:mysql://localhost:3306/test" description="Base de dados"
 		  />
 		  
-	
-	<Resource name="jdbc/weldtomcatamazon" 
-                  auth="Container" 
-                  type="javax.sql.DataSource" 
-                  maxActive="5" 
-                  initialSize="0" 
-                  minIdle="0" maxIdle="3" 
-                  maxWait="5000" removeAbandoned="true" 
-                  removeAbandonedTimeout="300" logAbandoned="true"
-                  username="masterkey" password="masterkey" driverClassName="com.mysql.jdbc.Driver" 
-                  url="jdbc:mysql://50.112.19.207:3306/masterkey" description="Base de dados"
-                  />
+  
 </Context>
